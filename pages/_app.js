@@ -1,5 +1,10 @@
-import '@/styles/globals.css'
+import { myContext } from "@/context";
+import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <myContext.Provider>
+      <Component {...pageProps} />;
+    </myContext.Provider>
+  );
 }
